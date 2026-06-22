@@ -25,3 +25,11 @@ A Healthcare IoT Deception Honeypot Network built using Cowrie, Docker, Python, 
 * Splunk Enterprise
 * Git & GitHub
 * SSH/Telnet Protocols
+
+# Week 1: Environment Setup and Device Simulation
+
+what we do:
+
+* Install Docker on Ubuntu
+* Deploy Cowrie (honeypot software)
+* Configure it to look like a medical IoT device
