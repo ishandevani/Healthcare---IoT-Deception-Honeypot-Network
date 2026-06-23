@@ -33,3 +33,32 @@ what we do:
 * Install Docker on Ubuntu
 * Deploy Cowrie (honeypot software)
 * Configure it to look like a medical IoT device
+
+## Installation
+
+1. Install Docker
+```bash
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+2. Pull Cowrie Image
+```bash
+sudo docker pull cowrie/cowrie
+```
+
+3. Run Cowrie Container
+```bash
+sudo docker run -d \
+--name cowrie \
+-p 2222:2222 \
+-p 2223:2223 \
+cowrie/cowrie
+```
+
+4. Verify Container Status
+```bash
+sudo docker ps
+```
