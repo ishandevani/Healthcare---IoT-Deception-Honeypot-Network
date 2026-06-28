@@ -28,37 +28,66 @@ A Healthcare IoT Deception Honeypot Network built using Cowrie, Docker, Python, 
 
 # Week 1: Environment Setup and Device Simulation
 
-what we do:
+What we do:
 
-* Install Docker on Ubuntu
-* Deploy Cowrie (honeypot software)
-* Configure it to look like a medical IoT device
+* Install Cowrie on Ubuntu
+* Configure it to look like a GE Healthcare CMS7000 Patient Monitor
+* Set fake SSH banner, hostname, and filesystem
 
 ## Installation
 
-1. Install Docker
+1. Install Dependencies
 ```bash
-sudo apt update
-sudo apt install docker.io -y
-sudo systemctl enable docker
-sudo systemctl start docker
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y git python3-venv python3-dev libssl-dev libffi-dev build-essential
 ```
 
-2. Pull Cowrie Image
+2. Create Cowrie User
 ```bash
-sudo docker pull cowrie/cowrie
+sudo adduser --disabled-password cowrie
+sudo su - cowrie
 ```
 
-3. Run Cowrie Container
+3. Clone and Install Cowrie
 ```bash
-sudo docker run -d \
---name cowrie \
--p 2222:2222 \
--p 2223:2223 \
-cowrie/cowrie
+git clone https://github.com/cowrie/cowrie
+cd cowrie
+python3 -m venv cowrie-env
+source cowrie-env/bin/activate
+pip install -r requirements.txt
 ```
 
-4. Verify Container Status
+4. Configure as Medical IoT Device
 ```bash
-sudo docker ps
+cp etc/cowrie.cfg.dist etc/cowrie.cfg
+nano etc/cowrie.cfg
 ```
+
+Key settings changed:
+* hostname = ICU-MONITOR-04
+* version_string = SSH-2.0-dropbear_2020.81
+* telnet enabled = true
+* arch = linux-arm-lsb
+
+5. Start Cowrie
+```bash
+bin/cowrie start
+bin/cowrie status
+```
+
+## Device Simulation Details
+
+* Device Model: GE Healthcare CMS7000
+* Hostname: ICU-MONITOR-04
+* SSH Banner: SSH-2.0-dropbear_2020.81
+* SSH Port: 2222
+* Telnet Port: 2223
+* Default Credentials: root/root, admin/admin
+
+## What Gets Logged
+
+* Attacker IP address
+* Username and password attempts
+* Every command typed
+* Files uploaded or downloaded
+* Full session recording
