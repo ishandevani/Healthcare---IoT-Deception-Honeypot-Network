@@ -16,7 +16,7 @@ wget -O splunk-9.3.0-51ccf43db5bd-linux-2.6-amd64.deb "https://download.splunk.c
 2. Once the download is complete, install Splunk:
 
 ```bash
-sudo dpkg -i splunk-ubuntu.deb
+sudo dpkg -i splunk-9.3.0-51ccf43db5bd-linux-2.6-amd64.deb
 ```
 
 ---
