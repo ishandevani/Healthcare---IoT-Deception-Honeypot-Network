@@ -72,7 +72,7 @@ Add the Cowrie log file to Splunk.
 Configuration:
 
 - Source Type: `cowrie:json`
-- Index: `healthcare`
+- Index: `cowrie`
 
 ---
 
@@ -103,27 +103,27 @@ Attempt multiple login attempts to generate logs.
 Search all Cowrie events.
 
 ```spl
-index=healthcare
+index=cowrie
 ```
 
 Failed login attempts.
 
 ```spl
-index=healthcare eventid="cowrie.login.failed"
+index=cowrie eventid="cowrie.login.failed"
 ```
 ![Splunk2](/Screenshots/Splunk2.png)
 
 Successful login.
 
 ```spl
-index=healthcare eventid="cowrie.login.success"
+index=cowrie eventid="cowrie.login.success"
 ```
 ![Splunk3](/Screenshots/Splunk3.png)
 
 Commands executed.
 
 ```spl
-index=healthcare eventid="cowrie.command.input"
+index=cowrie eventid="cowrie.command.input"
 ```
 ![Splunk1](/Screenshots/Splunk1.png)
 
