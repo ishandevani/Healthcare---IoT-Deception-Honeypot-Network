@@ -26,5 +26,5 @@ A Healthcare IoT Deception Honeypot Network built using Cowrie, Docker, Python, 
 * Git & GitHub
 * SSH/Telnet Protocols
 
-# Week 1: Environment Setup and Device Simulation
-# Week 2: Exposure and Data Capture
+### Week 1: Environment Setup and Device Simulation
+### Week 2: Exposure and Data Capture
