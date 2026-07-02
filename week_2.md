@@ -111,18 +111,21 @@ Failed login attempts.
 ```spl
 index=healthcare eventid="cowrie.login.failed"
 ```
+![Splunk2](/Screenshots/Splunk2.png)
 
 Successful login.
 
 ```spl
 index=healthcare eventid="cowrie.login.success"
 ```
+![Splunk3](/Screenshots/Splunk3.png)
 
 Commands executed.
 
 ```spl
 index=healthcare eventid="cowrie.command.input"
 ```
+![Splunk1](/Screenshots/Splunk1.png)
 
 ---
 
