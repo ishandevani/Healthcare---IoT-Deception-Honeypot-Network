@@ -27,39 +27,116 @@ cd cowrie
 python3 -m venv cowrie-env
 source cowrie-env/bin/activate
 pip install -r requirements.txt
+pip install cowrie
 ```
 
 4. Configure as Medical IoT Device
 ```bash
-cp etc/cowrie.cfg.dist etc/cowrie.cfg
+cp src/cowrie/data/etc/cowrie.cfg.dist etc/cowrie.cfg
 nano etc/cowrie.cfg
 ```
 
 Key settings changed:
-* hostname = ICU-MONITOR-04
+* hostname = ICU-MONITOR-01
 * version_string = SSH-2.0-dropbear_2020.81
 * telnet enabled = true
 * arch = linux-arm-lsb
 
-5. Start Cowrie
+5. redirect port:
+```bash
+sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-ports 2222
+sudo iptables -t nat -A PREROUTING -p tcp --dport 23 -j REDIRECT --to-ports 2223
+```
+
+6. Start Cowrie
 ```bash
 bin/cowrie start
 bin/cowrie status
 ```
 
-## Device Simulation Details
+## Healthcare IoT Device Simulation
 
-* Device Model: GE Healthcare CMS7000
-* Hostname: ICU-MONITOR-04
-* SSH Banner: SSH-2.0-dropbear_2020.81
-* SSH Port: 2222
-* Telnet Port: 2223
-* Default Credentials: root/root, admin/admin
+The honeypot was customized to resemble a hospital patient monitoring device.
 
-## What Gets Logged
+### Custom Hostname
 
-* Attacker IP address
-* Username and password attempts
-* Every command typed
-* Files uploaded or downloaded
-* Full session recording
+```
+ICU-MONITOR-01
+```
+
+---
+
+### Login Banner
+
+Modified `/etc/issue.net`
+
+```
+GE Healthcare CMS7000 Patient Monitoring System
+
+Authorized Access Only
+Hospital Internal Network
+All activity is monitored.
+```
+
+---
+
+### Custom Healthcare Files
+
+Created healthcare-specific files inside the virtual filesystem.
+
+```
+honeyfs/
+├── etc
+│   ├── device.conf
+│   ├── hostname
+│   ├── issue.net
+│   └── network.conf
+├── home
+│   └── admin
+├── opt
+│   └── monitor
+│       └── patients.db
+└── var
+    └── log
+        └── patient_data.log
+```
+
+---
+
+### Simulated Files
+
+| File | Purpose |
+|-------|----------|
+| `/etc/device.conf` | Device configuration |
+| `/etc/network.conf` | Network configuration |
+| `/etc/hostname` | Healthcare device hostname |
+| `/etc/issue.net` | Login banner |
+| `/opt/monitor/patients.db` | Simulated patient database |
+| `/var/log/patient_data.log` | Simulated monitoring log |
+
+---
+
+## SSH Configuration
+
+Configured Cowrie to listen for SSH connections.
+
+Example:
+
+```ini
+listen_endpoints = tcp:2222:interface=0.0.0.0
+```
+
+---
+
+## Verification
+
+Verified the following.
+
+- Cowrie service started successfully.
+- SSH connection established.
+- Fake healthcare login banner displayed.
+- Healthcare hostname configured.
+- Virtual filesystem customized.
+- Honeypot ready for attacker interaction.
+
+---
