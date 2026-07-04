@@ -130,8 +130,9 @@ index="cowrie" eventid="cowrie.command.input"
 malicious payload drops.
 
 ```
-![Splunk4](/Screenshots/Splunk4.png)
+index="cowrie" eventid="cowrie.session.file_download"
 ```
+![Splunk4](/Screenshots/Splunk4.png)
 
 ---
 
