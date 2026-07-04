@@ -127,6 +127,12 @@ index="cowrie" eventid="cowrie.command.input"
 ```
 ![Splunk1](/Screenshots/Splunk1.png)
 
+malicious payload drops
+
+```spl
+![Splunk4](/Screenshots/Splunk4.png)
+```
+
 ---
 
 ## Results
