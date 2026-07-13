@@ -59,6 +59,8 @@ The generated Excel workbook contains four worksheets:
 | Hashes | Extracted SHA-256 malware hashes |
 | URL | Extracted download URLs |
 
+![IOC](/Screenshots/IOC.png)
+
 ---
 
 ## Outcome
