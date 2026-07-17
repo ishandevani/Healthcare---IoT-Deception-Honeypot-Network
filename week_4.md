@@ -32,6 +32,8 @@ The dashboard includes the following visualizations:
 - Payload Download Attempts
 - Active Sessions
 
+![Dashboard](/Screenshots/Dashboard.png)
+
 ---
 
 ## IP Geolocation
